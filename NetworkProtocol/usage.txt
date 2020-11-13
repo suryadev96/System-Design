@@ -1,0 +1,25 @@
+
+npm init
+
+npm install express
+
+node server.js
+
+curl localhost:3000/hello
+
+curl --header 'content-type:application/json' localhost:3000/hello --data '{"foo":"bar"}' 
+
+
+for testing nginx reverse proxy
+
+curl localhost:8081/hello
+
+nc -l 8081 
+nc 127.0.01 8081
+
+Nginx configuration
+
+/usr/local/etc/nginx/nginx.conf
+
+sudo nginx -s stop
+sudo nginx  

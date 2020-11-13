@@ -1,0 +1,7 @@
+cloud.google.com/iot/docs/reference/rest
+
+https://developer.twitter.com/en/docs/twitter-api/v1/tweets/timelines/overview
+
+https://stripe.com/docs/api/idempotent_requests
+
+Kraken Github for peer-peer networks

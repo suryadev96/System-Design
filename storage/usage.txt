@@ -1,0 +1,15 @@
+node server.js
+
+curl localhost:3001/memory/foo --header 'Content-Type: application/json' --data '{"data":"This is some data in memory"}'
+
+curl localhost:3001/memory/foo -w "\n"
+
+create directory aedb_data
+
+curl localhost:3001/disk/foo --header 'Content-Type: application/json' --data '{"data":"This is some data in disk"}'
+
+curl localhost:3001/disk/foo -w "\n"
+
+stop and start the server
+
+you would see that memory would have got deleted.

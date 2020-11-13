@@ -1,0 +1,13 @@
+(for i in `seq 1 10000`; do sleep 1; echo New Stock Price; done) | NAME=STOCK_BROKER TOPIC_ID=stock_prices node publisher.js
+
+(for i in `seq 1 10000`; do sleep 1; echo Breaking News; done) | NAME=NEWS_STATION TOPIC_ID=news_alerts node publisher.js
+
+(for i in `seq 1 10000`; do sleep 1; echo YouTube Notification; done) | NAME=YOU_TUBE TOPIC_ID=youtube_notifications node publisher.js
+
+TOPIC_ID=news_alerts node subscriber.js
+
+TOPIC_ID=stock_prices node subscriber.js
+
+TOPIC_ID=youtube_notifications node subscriber.js
+
+node server.js
